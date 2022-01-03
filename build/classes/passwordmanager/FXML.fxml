@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="passwordmanager.FXMLController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="913.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="ChnagePasswordMenu" mnemonicParsing="false" onAction="#ChangePasswordPressed" text="Change Password" />
+                  <MenuItem fx:id="ImportMenuButton" mnemonicParsing="false" onAction="#ImportButtonPressed" text="Import" />
+                  <MenuItem fx:id="ExportMenuButton" mnemonicParsing="false" onAction="#ExportButtonPressed" onMenuValidation="#ExportButtonPressed" text="Export" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="OpenHelpFile" mnemonicParsing="false" onAction="#OpenHelpFilePressed" text="Open Help File" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="38.0" layoutY="42.0" text="Label" />
+      <TextField fx:id="LabelText" layoutX="71.0" layoutY="38.0" />
+      <Label layoutX="15.0" layoutY="80.0" text="Username" />
+      <TextField fx:id="UsernameText" layoutX="71.0" layoutY="76.0" />
+      <Label layoutX="17.0" layoutY="117.0" text="Password" />
+      <TextField fx:id="PasswordText" layoutX="71.0" layoutY="113.0" />
+      <Label layoutX="38.0" layoutY="153.0" text="Email" />
+      <TextField fx:id="EmailText" layoutX="71.0" layoutY="149.0" />
+      <Label layoutX="52.0" layoutY="192.0" text="Pin" />
+      <TextField fx:id="PinText" layoutX="71.0" layoutY="188.0" />
+      <Button fx:id="CreateButton" layoutX="27.0" layoutY="231.0" mnemonicParsing="false" onAction="#CreateButtonPressed" text="Create" />
+      <Button fx:id="ClearButton" layoutX="84.0" layoutY="231.0" mnemonicParsing="false" onAction="#ClearButtonPressed" text="Clear" />
+      <Button fx:id="SearchButton" layoutX="131.0" layoutY="231.0" mnemonicParsing="false" onAction="#SearchButtonPressed" text="Search" />
+      <Label layoutX="233.0" layoutY="25.0" text="My Accounts" />
+      <TableView fx:id="AccountsTableview" layoutX="233.0" layoutY="49.0" prefHeight="505.0" prefWidth="666.0">
+        <columns>
+          <TableColumn fx:id="LabelColumn" prefWidth="107.0" text="Label" />
+          <TableColumn fx:id="UserColumn" prefWidth="97.0" text="Username" />
+            <TableColumn fx:id="PassColumn" prefWidth="144.0" text="Password" />
+            <TableColumn fx:id="EmailColumn" prefWidth="241.0" text="Email" />
+            <TableColumn fx:id="PinColumn" prefWidth="76.0" text="Pin" />
+        </columns>
+      </TableView>
+      <Button fx:id="SortButton" layoutX="188.0" layoutY="231.0" mnemonicParsing="false" onAction="#SortButtonPressed" text="Sort" />
+   </children>
+</AnchorPane>
